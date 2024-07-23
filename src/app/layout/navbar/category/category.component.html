@@ -1,1 +1,15 @@
-<p>category works!</p>
+<div class = "categories pt-3 mx-8">
+    @for (category of categories; track category.techincalName){
+        @if(category.techincalName != 'ALL'){
+            <div class="flex flex-column allign-items-center pb-3 category"
+            [class.category-activated] = "category.activated"> 
+            <fa-icon class="mb-1" [icon] = "category.icon"></fa-icon>
+            <div title ="{{category.displayName}}" class = "name">{{category.displayName}</div>}
+
+            </div>
+ 
+        }
+    }
+</div>
+
+<!-- class activated with a bollean category.activated indicating that the the category should be displayed when true -->

@@ -153,7 +153,7 @@ export class CategoryService {
 
   }
   
-  getCategory(): Category[]{
+  getCategories(): Category[]{
     return this.categories;  
   }
 
